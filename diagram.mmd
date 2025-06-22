@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant User
+    participant App
+    participant Server
+    participant Driver
+
+    User->>App: 택시 호출 요청
+    App->>Server: 호출 정보 전송
+    Server->>Driver: 배차 요청
+    Driver-->>Server: 수락 or 거절
+    Server-->>App: 배차 결과 전송
+    App-->>User: 배차 결과 알림
